@@ -6,10 +6,10 @@ orbs:
 jobs:
   test:
     docker:
-     - image: amazon/aws-cli
-#    - image: 196855345466.dkr.ecr.us-east-1.amazonaws.com/circleci-config:1.2.1
-#      aws_auth:
-#        oidc_role_arn: 'arn:aws:iam::196855345466:role/circleci-pull-images'
+#     - image: amazon/aws-cli
+    - image: 196855345466.dkr.ecr.us-east-1.amazonaws.com/circleci-config:1.2.1
+      aws_auth:
+        oidc_role_arn: 'arn:aws:iam::196855345466:role/circleci-pull-images'
     steps:
     - checkout
     - run: echo "this is the test job"
