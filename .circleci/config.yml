@@ -9,7 +9,7 @@ jobs:
      - image: amazon/aws-cli
     steps:
     - checkout
-    - run: sleep 10
+    - run: sleep 20
     - run: echo "this is the test job"
 
 workflows:
