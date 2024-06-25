@@ -2,14 +2,14 @@ pull_request_rules:
   - name: automatic merge
     conditions:
       - label=automerge
-      - check-success=ci/circleci: test
+      - check-success=ci/circleci:\ test
     actions:
       queue:
         name: speculative
 
 queue_rules:
   - name: speculative
-    conditions:
-      - check-success=ci/circleci: test
+    queue_conditions:
+        - check-success=ci/circleci:\ test
     speculative_checks: 3
 
