@@ -11,5 +11,10 @@ queue_rules:
   - name: speculative
     queue_conditions:
     - "check-success=ci/circleci: test"
-    speculative_checks: 3
+    priority_rules:
+    - name: high priority
+      conditions:
+      - label=hotfix-priority
+      priority: high
+    speculative_checks: 5
 
